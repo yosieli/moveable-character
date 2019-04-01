@@ -18,26 +18,39 @@ character.src = `${ASSET_ROOT}/static.gif`
 // Add the character image to the page
 document.body.append(character)
 
+// Define a variable to represent the direction our character is moving
 let direction = null
 
+// Have the navigator do some research on  setInterval- what is it doing?
 setInterval(function(){
 
+    // character.style.left / bottom are both strings: "0px"
+    // If we want to do some arithmatic, we'll need to parse them into integers:
     const left = parseInt(character.style.left)
     const bottom = parseInt(character.style.bottom)
 
+    // If the character is moving right, the distance between him and the left side of the screen should increase
     if(direction == 'right'){
         character.style.left = `${left+5}px`
     }
 
-}, 20)
+    // Account for other directions here:
 
-function walkLeft(){
+}, 20) // <- What is this number?
 
-}
-
+// When we want to start walking a given direction, let's change: 
+//  1. The characters gif.
+//  2. The value of the direction variable. How will this effect the setInterval loop?
 function walkRight(){
     character.src = `${ASSET_ROOT}/walkright.gif`
     direction = 'right'
+}
+
+
+// Finish the functions below:
+
+function walkLeft(){
+
 }
 
 function walkUp(){
