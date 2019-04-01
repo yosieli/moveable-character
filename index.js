@@ -1,4 +1,4 @@
-// Set up a variable to use when we need to set the characters image src
+// Define a variable to use when we need to set the characters image src
 const ASSET_ROOT = './assets/green-character'
 
 // Create an img element to represent the character
@@ -21,7 +21,7 @@ document.body.append(character)
 // Define a variable to represent the direction our character is moving
 let direction = null
 
-// Have the navigator do some research on  setInterval- what is it doing?
+// Have someone at your table do some research on  setInterval- what is it doing?
 setInterval(function(){
 
     // character.style.left / bottom are both strings: "0px"
@@ -40,7 +40,7 @@ setInterval(function(){
 
 // When we want to start walking a given direction, let's change: 
 //  1. The characters gif.
-//  2. The value of the direction variable. How will this effect the setInterval loop?
+//  2. The value of the direction variable. How will this effect the setInterval loop above?
 function walkRight(){
     character.src = `${ASSET_ROOT}/walkright.gif`
     direction = 'right'
