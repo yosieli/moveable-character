@@ -21,6 +21,9 @@ document.body.append(character)
 // Define a variable to represent the direction our character is moving
 let direction = null
 
+// Define a variable to reperesent the speed of our character
+let speed = 5
+
 // Have someone at your table do some research on  setInterval- what is it doing?
 setInterval(function(){
 
@@ -30,8 +33,9 @@ setInterval(function(){
     const bottom = parseInt(character.style.bottom)
 
     // If the character is moving right, the distance between him and the left side of the screen should increase
+    // What is speed?
     if(direction == 'right'){
-        character.style.left = `${left+5}px`
+        character.style.left = `${left+speed}px`
     }
 
     // Account for other directions here:
