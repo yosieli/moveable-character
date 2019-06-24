@@ -37,6 +37,23 @@ setInterval(function(){
     if(direction == 'right'){
         character.style.left = `${left+speed}px`
     }
+    else if (direction == 'left'){
+        character.style.left=`${left-speed}px`
+    }
+    else if  (direction == 'top')
+    {
+        character.style.bottom=`${bottom + speed}px`
+    }
+    else if (direction == 'bottom'){
+        character.style.bottom= `${bottom - speed}px`
+    }
+    else{
+        character.src = `${ASSET_ROOT}/static.gif`
+    direction = null
+
+    }
+
+    
 
     // Account for other directions here:
 
@@ -54,14 +71,20 @@ function walkRight(){
 // Finish the functions below:
 
 function walkLeft(){
+    character.src= `${ASSET_ROOT}/walkleft.gif`
+    direction= 'left'
 
 }
 
 function walkUp(){
+    character.src = `${ASSET_ROOT}/walkup.gif`
+    direction = 'top' 
 
 }
 
 function walkDown(){
+    character.src = `${ASSET_ROOT}/walkdown.gif`
+    direction = 'bottom' 
 
 }
 
